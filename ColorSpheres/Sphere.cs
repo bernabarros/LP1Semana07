@@ -30,9 +30,10 @@ namespace ColorSpheres
             }
             return thrown_times;
         }
-        public Tuple<int,int,int> GetColor()
+        public Tuple<int,int,int,int> GetColor()
         {
-            return Tuple.Create(color.GetRed(), color.GetGreen(), color.GetBlue());
+            return Tuple.Create(color.GetRed(), color.GetGreen(), 
+            color.GetBlue(), color.GetGrey());
         }
         public int GetRadius()
         {
