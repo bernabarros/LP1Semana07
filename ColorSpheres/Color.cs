@@ -7,17 +7,18 @@ namespace ColorSpheres
 {
     public class Color
     {
-        private int red;
-        private int green;
-        private int blue;
-        private int alpha;
+        private readonly int red;
+        private readonly int green;
+        private readonly int blue;
+        private readonly int alpha;
+        private const int alpha_value = 255;
 
         public Color(int red, int green, int blue)
         {
             this.red = red;
             this.green = green;
             this.blue = blue;
-            alpha = 255;
+            alpha = alpha_value;
         }
 
         public int GetRed()
