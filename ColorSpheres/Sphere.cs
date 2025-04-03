@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,17 +9,18 @@ namespace ColorSpheres
     public class Sphere
     {
         private readonly Color color;
-        private int radius;
+        private float radius;
         private int thrown_times;
 
-        public Sphere(int color_red, int color_green, int color_blue,int radius)
+        public Sphere(byte color_red, byte color_green, byte color_blue
+        , byte alpha, byte radius)
         {
-            this.color = new Color(color_red, color_green, color_blue);
+            this.color = new Color(color_red, color_green, color_blue, alpha);
             this.radius = radius;
             thrown_times = 0;
         }
 
-        public int Pop()
+        public float Pop()
         {
             return radius = 0;
         }
@@ -30,12 +32,27 @@ namespace ColorSpheres
             }
             return thrown_times;
         }
-        public Tuple<int,int,int,int> GetColor()
+        public byte GetColorRed()
         {
-            return Tuple.Create(color.GetRed(), color.GetGreen(), 
-            color.GetBlue(), color.GetGrey());
+            return color.GetRed();
         }
-        public int GetRadius()
+        public byte GetColorGreen()
+        {
+            return color.GetGreen();
+        }
+        public byte GetColorBlue()
+        {
+            return color.GetBlue();
+        }
+        public byte GetColorAlpha()
+        {
+            return color.GetAlpha();
+        }
+        public byte GetColorGrey()
+        {
+            return color.GetGrey();
+        }
+        public float GetRadius()
         {
             return radius;
         }
