@@ -39,7 +39,7 @@ namespace MyRoguelike
             }
             set
             {
-                health += value;
+                health = value;
 
                 if(health < 0)
                 {
