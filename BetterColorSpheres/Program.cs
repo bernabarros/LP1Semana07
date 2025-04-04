@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace BetterColorSpheres
 {
@@ -19,15 +20,15 @@ namespace BetterColorSpheres
 
             green_sphere.Pop();
 
-            Console.WriteLine(red_sphere.GetColorRed());
+            Console.WriteLine(red_sphere.Color);
             Console.WriteLine(red_sphere.GetRadius());
             Console.WriteLine(red_sphere.GetTimesThrown());
 
-            Console.WriteLine(blue_sphere.GetColorBlue());
+            Console.WriteLine(blue_sphere.Color);
             Console.WriteLine(blue_sphere.GetRadius());
             Console.WriteLine(blue_sphere.GetTimesThrown());
 
-            Console.WriteLine(green_sphere.GetColorGreen());
+            Console.WriteLine(green_sphere.Color);
             Console.WriteLine(green_sphere.GetRadius());
             Console.WriteLine(green_sphere.GetTimesThrown());
         }

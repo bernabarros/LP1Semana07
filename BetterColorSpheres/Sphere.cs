@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace BetterColorSpheres
 {
     public class Sphere
     {
-        private readonly Color color;
+        private Color color;
         private float radius;
         private int times_thrown;
         public Sphere(byte inputred, byte inputgreen, byte inputblue, 
         byte inputalpha, float radius)
         {
-            color = new Color(inputred, inputgreen, inputblue, inputalpha);
+            this.color = new Color(inputred, inputgreen, inputblue, inputalpha);
             this.radius = radius;
             times_thrown = 0;
+        }
+        public string Color
+        {
+            get
+            {
+                string colors = color.Red.ToString();
+                return colors;
+            }
         }
         public byte GetColorRed()
         {
