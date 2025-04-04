@@ -29,14 +29,16 @@ namespace PlayerStats
         {
             get
             {
+                float result;
                 if(playedGames>0)
                 {
-                    return (float)wonGames/playedGames;
+                    result =(float)wonGames/playedGames;
                 }
-                else 
+                else
                 {
-                    return 0;
+                    result=0;
                 }
+                return result;
             }
         }
         public void PlayGame(bool win)
